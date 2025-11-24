@@ -2,7 +2,7 @@
 
 import { useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
-import { Mesh } from 'three';
+import { Mesh, BoxGeometry, EdgesGeometry } from 'three';
 
 interface RotatingCubeProps {
   scale?: number;
@@ -18,28 +18,27 @@ export const RotatingCube: React.FC<RotatingCubeProps> = ({ scale = 1, speed = 0
     const time = clock.getElapsedTime();
 
     if (meshRef.current) {
-      // Main cube rotation
       meshRef.current.rotation.x = time * speed * 0.8;
       meshRef.current.rotation.y = time * speed * 1.2;
       meshRef.current.rotation.z = time * speed * 0.5;
-
-      // Floating animation
       meshRef.current.position.y = Math.sin(time * 0.5) * 0.3;
     }
 
     if (wireframeRef.current) {
-      // Counter-rotate wireframe for depth
       wireframeRef.current.rotation.x = -time * speed * 1.2;
       wireframeRef.current.rotation.y = -time * speed * 0.8;
       wireframeRef.current.rotation.z = time * speed * 0.3;
     }
 
     if (glowRef.current) {
-      // Pulsing glow effect
       const pulse = 1 + Math.sin(time * 2) * 0.1;
       glowRef.current.scale.set(pulse, pulse, pulse);
     }
   });
+
+  // Pre-create geometry for edges (no global THREE usage)
+  const boxGeo = new BoxGeometry(2 * scale, 2 * scale, 2 * scale);
+  const edgesGeo = new EdgesGeometry(boxGeo);
 
   return (
     <group>
@@ -58,56 +57,41 @@ export const RotatingCube: React.FC<RotatingCubeProps> = ({ scale = 1, speed = 0
       {/* Outer wireframe cube */}
       <mesh ref={wireframeRef} scale={scale * 1.15}>
         <boxGeometry args={[2, 2, 2]} />
-        <meshBasicMaterial
-          wireframe
-          color="#60a5fa"
-          opacity={0.4}
-          transparent
-        />
+        <meshBasicMaterial wireframe color="#60a5fa" opacity={0.4} transparent />
       </mesh>
 
       {/* Inner wireframe glow */}
       <mesh scale={scale * 0.85}>
         <boxGeometry args={[2, 2, 2]} />
-        <meshBasicMaterial
-          wireframe
-          color="#a78bfa"
-          opacity={0.3}
-          transparent
-        />
+        <meshBasicMaterial wireframe color="#a78bfa" opacity={0.3} transparent />
       </mesh>
 
       {/* Pulsing outer glow */}
       <mesh ref={glowRef} scale={scale * 1.3}>
         <boxGeometry args={[2, 2, 2]} />
-        <meshBasicMaterial
-          wireframe
-          color="#00d4ff"
-          opacity={0.15}
-          transparent
-        />
+        <meshBasicMaterial wireframe color="#00d4ff" opacity={0.15} transparent />
       </mesh>
 
       {/* Corner particles */}
       {[
-        [1, 1, 1], [1, 1, -1], [1, -1, 1], [1, -1, -1],
-        [-1, 1, 1], [-1, 1, -1], [-1, -1, 1], [-1, -1, -1]
+        [1, 1, 1],
+        [1, 1, -1],
+        [1, -1, 1],
+        [1, -1, -1],
+        [-1, 1, 1],
+        [-1, 1, -1],
+        [-1, -1, 1],
+        [-1, -1, -1],
       ].map((pos, i) => (
         <mesh key={i} position={[pos[0] * scale, pos[1] * scale, pos[2] * scale]}>
           <sphereGeometry args={[0.1, 16, 16]} />
-          <meshBasicMaterial
-            color="#00d4ff"
-            opacity={0.8}
-            transparent
-          />
+          <meshBasicMaterial color="#00d4ff" opacity={0.8} transparent />
         </mesh>
       ))}
 
-      {/* Edge lines */}
-      {/* Front face edges */}
-      <lineSegments>
-        <edgesGeometry args={[new THREE.BoxGeometry(2 * scale, 2 * scale, 2 * scale)]} />
-        <lineBasicMaterial color="#4da6ff" opacity={0.6} transparent linewidth={2} />
+      {/* Edge lines (using imported geometries, no global THREE) */}
+      <lineSegments geometry={edgesGeo}>
+        <lineBasicMaterial color="#4da6ff" opacity={0.6} transparent />
       </lineSegments>
 
       {/* Rotating orbital rings */}

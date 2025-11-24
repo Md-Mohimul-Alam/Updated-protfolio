@@ -1,8 +1,9 @@
+// src/components/common/ProjectCard.tsx
 
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Project } from '../../types';
-import { fadeInUp, hoverLift, cardHover } from '../../utils/animations';
+import { fadeInUp, cardHover } from '../../utils/animations';
 
 interface ProjectCardProps {
   project: Project;
@@ -15,7 +16,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
       variants={fadeInUp}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-50px" }}
+      viewport={{ once: true, margin: '-50px' }}
       transition={{ delay: index * 0.1 }}
       whileHover={cardHover}
       className="group relative overflow-hidden rounded-lg border border-slate-700 bg-gradient-to-br from-slate-900 to-slate-800 shadow-xl"
@@ -38,7 +39,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
       {/* Content */}
       <div className="relative p-6">
         {/* Badge */}
-        <motion.div 
+        <motion.div
           className="mb-3 inline-block"
           whileHover={{ scale: 1.1 }}
           transition={{ type: 'spring', stiffness: 300 }}
@@ -49,7 +50,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
         </motion.div>
 
         {/* Title */}
-        <motion.h3 
+        <motion.h3
           className="mb-2 text-xl font-bold text-white transition-colors group-hover:text-blue-400"
           whileHover={{ x: 5 }}
         >
@@ -80,16 +81,18 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
 
         {/* Links */}
         <div className="flex gap-3">
-          <motion.a
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-1 rounded-md bg-blue-600 py-2 text-center text-sm font-semibold text-white transition-all"
-            whileHover={{ scale: 1.05, y: -2 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            GitHub
-          </motion.a>
+          {project.github && (
+            <motion.a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 rounded-md bg-blue-600 py-2 text-center text-sm font-semibold text-white transition-all"
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              GitHub
+            </motion.a>
+          )}
           {project.liveDemo && (
             <motion.a
               href={project.liveDemo}
@@ -106,7 +109,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
       </div>
 
       {/* Accent Line */}
-      <motion.div 
+      <motion.div
         className="absolute bottom-0 left-0 h-1 w-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"
         initial={{ scaleX: 0 }}
         whileHover={{ scaleX: 1 }}
