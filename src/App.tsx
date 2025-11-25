@@ -52,7 +52,7 @@ const App: React.FC = () => {
                     src="/profile/profile-photo.jpeg"
                     alt="MD Mohimul Alam"
                     className="w-full h-full object-cover"
-                  style={{ width: '10px', height: '10px', borderRadius: '50%' }}  
+                  style={{ width: '40px', height: '40px', borderRadius: '50%' }}  
                   />
               </a>
             </motion.div>
