@@ -48,9 +48,7 @@ const App: React.FC = () => {
               className="text-2xl font-bold cursor-pointer"
             >
               <a href="#home">
-                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                  MA
-                </span>
+                <img src="/logo.jpeg" alt="Logo" className="h-8 w-8" />
               </a>
             </motion.div>
 

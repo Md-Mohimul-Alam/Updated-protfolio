@@ -1,6 +1,6 @@
 // src/utils/constants.ts
 
-import { Project, Experience, Certification, Skill } from '../types';
+import { Project, Experience, Certification, Skill } from '.';
 
 export const PROJECTS: Project[] = [
   {
@@ -82,12 +82,12 @@ export const SKILLS: Skill[] = [
   },
   {
     category: 'Web3',
-    skills: ['Web3.js', 'Hyperledger Fabric SDK', 'Hyperledger Composer','hyperledger Arise Framework','Hyperledger Fabric CA'],
+    skills: ['Solidity', 'Web3.js', 'Truffle', 'Hardhat'],
     proficiency: 80,
   },
   {
     category: 'DevOps',
-    skills: ['Docker', 'Git', 'CI/CD', 'Linux'],
+    skills: ['Docker', 'Git', 'CI/CD', 'Linux', 'AWS'],
     proficiency: 78,
   },
   {
@@ -103,8 +103,8 @@ export const CERTIFICATIONS: Certification[] = [
     name: 'CCNAv7: Introduction to Networks',
     issuer: 'Cisco',
     date: '2022',
-    badgeUrl: 'https://images.credly.com/size/680x680/images/242902b5-f527-42ad-865e-977c9e1b5b58/image.png',
-    credlyUrl: 'https://www.credly.com/badges/75ff6769-1e36-44d2-a7a5-fce98429a971',
+    badgeUrl: '/badges/cisco-intro.png',
+    credlyUrl: 'https://www.credly.com/users/mohim-reza',
     category: 'Networking',
   },
   {
@@ -112,8 +112,8 @@ export const CERTIFICATIONS: Certification[] = [
     name: 'CCNAv7: Switching, Routing, and Wireless Essentials',
     issuer: 'Cisco',
     date: '2024',
-    badgeUrl: 'https://images.credly.com/size/680x680/images/f4ccdba9-dd65-4349-baad-8f05df116443/CCNASRWE__1_.png',
-    credlyUrl: 'https://www.credly.com/badges/0b045a72-c003-4aef-bb74-6b91b41d3936',
+    badgeUrl: '/badges/cisco-ccna.png',
+    credlyUrl: 'https://www.credly.com/users/mohim-reza',
     category: 'Networking',
   },
   {
@@ -121,16 +121,25 @@ export const CERTIFICATIONS: Certification[] = [
     name: 'Ethical Hacker',
     issuer: 'Cisco Networking Academy',
     date: '2024',
-    badgeUrl: 'https://images.credly.com/images/70d71df5-f3dc-4380-9b9d-f22513a70417/CCNAITN__1_.png',
+    badgeUrl: '/badges/ethical-hacker.png',
     credlyUrl: 'https://www.credly.com/users/mohim-reza',
     category: 'Security',
+  },
+  {
+    id: 'HTML Essentials',
+    name: 'HTML Essentials',
+    issuer: 'Issued by Cisco',
+    date: '2025',
+    badgeUrl: '/badges/blob.png',
+    credlyUrl: 'https://www.credly.com/badges/60842b21-4c21-4910-acef-3cf4da87c29a',
+    category: 'Development',
   },
   {
     id: 'react-nodejs',
     name: 'React.js & Node.js',
     issuer: 'Global Skills Development Agency',
     date: '2023',
-    badgeUrl: 'https://globalskills.com.bd/assets/images/logo-f-width.png',
+    badgeUrl: '/badges/react-nodejs.png',
     credlyUrl: 'https://www.credly.com/users/mohim-reza',
     category: 'Development',
   },
@@ -139,8 +148,8 @@ export const CERTIFICATIONS: Certification[] = [
     name: 'Growth Hacking & Online Campaigns Internship',
     issuer: 'RIT & Excelerate',
     date: '2025',
-    badgeUrl: 'https://excelerateuserprofile.s3.ap-south-1.amazonaws.com/WebsiteImageFiles/Badge/Badge_0000000010KRZVQY9TWPXFJPKG_image_link.png',
-    credlyUrl: '',
+    badgeUrl: '/badges/growth-hacking.png',
+    credlyUrl: 'https://www.credly.com/users/mohim-reza',
     category: 'Marketing',
   },
 ];
