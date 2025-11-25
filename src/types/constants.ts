@@ -126,6 +126,15 @@ export const CERTIFICATIONS: Certification[] = [
     category: 'Security',
   },
   {
+    id: 'HTML Essentials',
+    name: 'HTML Essentials',
+    issuer: 'Issued by Cisco',
+    date: '2025',
+    badgeUrl: '/badges/blob.png',
+    credlyUrl: 'https://www.credly.com/badges/60842b21-4c21-4910-acef-3cf4da87c29a',
+    category: 'Development',
+  },
+  {
     id: 'react-nodejs',
     name: 'React.js & Node.js',
     issuer: 'Global Skills Development Agency',
