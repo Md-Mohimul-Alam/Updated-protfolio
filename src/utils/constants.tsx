@@ -1,6 +1,6 @@
 // src/utils/constants.ts
 
-import { Project, Experience, Certification, Skill } from '.';
+import { Project, Experience, Certification, Skill } from '../types';
 
 export const PROJECTS: Project[] = [
   {
