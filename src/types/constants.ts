@@ -49,6 +49,7 @@ export const PROJECTS: Project[] = [
     image: '/projects/expense.jpg',
     technologies: ['React', 'TypeScript', 'Node.js', 'Express', 'MongoDB'],
     github: 'https://github.com/Md-Mohimul-Alam/Personal-Expense-Tracker',
+    liveDemo: 'https://personal-expense-tracker-henna.vercel.app/expenses',
     featured: false,
     category: 'fullstack',
   },
@@ -91,8 +92,8 @@ export const SKILLS: Skill[] = [
   },
   {
     category: 'Web3',
-    skills: ['Solidity', 'Web3.js', 'Truffle', 'Hardhat'],
-    proficiency: 80,
+    skills: ['Solidity', 'Web3.js',],
+    proficiency: 60,
   },
   {
     category: 'DevOps',

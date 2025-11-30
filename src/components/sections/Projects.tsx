@@ -1,10 +1,9 @@
-// src/components/sections/Projects.tsx
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ProjectCard } from '../common/ProjectCard';
 import { PROJECTS } from '../../utils/constants';
 import { Project } from '../../types';
+import { staggerContainer, fadeInUp } from '../../utils/animations';
 
 type Category = 'all' | 'blockchain' | 'frontend' | 'fullstack';
 
@@ -15,26 +14,16 @@ export const Projects: React.FC = () => {
     ? PROJECTS
     : PROJECTS.filter(project => project.category === filter);
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
   return (
     <section id="projects" className="relative w-full bg-gradient-to-b from-slate-950 to-blue-950/20 py-20 px-4">
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-7xl">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="mb-12 text-center"
+          className="mb-16 text-center"
         >
           <h2 className="mb-4 text-4xl font-bold text-white md:text-5xl">
             Featured Projects
@@ -53,26 +42,28 @@ export const Projects: React.FC = () => {
           className="mb-12 flex flex-wrap justify-center gap-4"
         >
           {(['all', 'blockchain', 'frontend', 'fullstack'] as const).map((category) => (
-            <button
+            <motion.button
               key={category}
               onClick={() => setFilter(category)}
               className={`rounded-full px-6 py-2 font-semibold transition-all capitalize ${
                 filter === category
                   ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/50'
-                  : 'border border-slate-600 text-slate-300 hover:border-blue-500'
+                  : 'border border-slate-600 text-slate-300 hover:border-blue-500 hover:text-white'
               }`}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
               {category === 'all' ? 'All Projects' : category}
-            </button>
+            </motion.button>
           ))}
         </motion.div>
 
         {/* Projects Grid */}
         <motion.div
-          variants={containerVariants}
+          variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: '-50px' }}
           className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
         >
           {filteredProjects.map((project, index) => (
