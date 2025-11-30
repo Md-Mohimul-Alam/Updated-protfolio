@@ -130,7 +130,7 @@ export const CERTIFICATIONS: Certification[] = [
     name: 'HTML Essentials',
     issuer: 'Issued by Cisco',
     date: '2025',
-    badgeUrl: 'https://images.credly.com/images/b1c17d0c-e76b-45fc-9b28-87b01ae1caf3/blob.png',
+    badgeUrl: 'https://images.credly.com/size/680x680/images/b1c17d0c-e76b-45fc-9b28-87b01ae1caf3/blob.png',
     credlyUrl: 'https://www.credly.com/badges/60842b21-4c21-4910-acef-3cf4da87c29a',
     category: 'Development',
   },
