@@ -14,6 +14,13 @@ export const Projects: React.FC = () => {
     ? PROJECTS
     : PROJECTS.filter(project => project.category === filter);
 
+  const categoryCounts = {
+    all: PROJECTS.length,
+    blockchain: PROJECTS.filter(p => p.category === 'blockchain').length,
+    frontend: PROJECTS.filter(p => p.category === 'frontend').length,
+    fullstack: PROJECTS.filter(p => p.category === 'fullstack').length,
+  };
+
   return (
     <section id="projects" className="relative w-full bg-gradient-to-b from-slate-950 to-blue-950/20 py-20 px-4">
       <div className="mx-auto max-w-7xl">
@@ -45,15 +52,20 @@ export const Projects: React.FC = () => {
             <motion.button
               key={category}
               onClick={() => setFilter(category)}
-              className={`rounded-full px-6 py-2 font-semibold transition-all capitalize ${
+              className={`rounded-full px-6 py-2 font-semibold transition-all duration-300 capitalize flex items-center gap-2 ${
                 filter === category
                   ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/50'
-                  : 'border border-slate-600 text-slate-300 hover:border-blue-500 hover:text-white'
+                  : 'border border-slate-600 text-slate-300 hover:border-blue-500 hover:text-white hover:bg-slate-800/50'
               }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               {category === 'all' ? 'All Projects' : category}
+              <span className={`text-xs px-2 py-1 rounded-full ${
+                filter === category ? 'bg-blue-700' : 'bg-slate-700'
+              }`}>
+                {categoryCounts[category]}
+              </span>
             </motion.button>
           ))}
         </motion.div>
@@ -78,7 +90,13 @@ export const Projects: React.FC = () => {
             animate={{ opacity: 1 }}
             className="flex h-96 items-center justify-center text-center"
           >
-            <p className="text-lg text-slate-400">No projects found in this category</p>
+            <div className="text-slate-400">
+              <svg className="w-16 h-16 mx-auto mb-4 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <p className="text-lg">No projects found in this category</p>
+              <p className="text-sm mt-2">Try selecting a different filter</p>
+            </div>
           </motion.div>
         )}
       </div>
