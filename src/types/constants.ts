@@ -203,3 +203,5 @@ export const SOCIAL_LINKS = [
   { name: 'LinkedIn', url: CONTACT.linkedin, icon: 'Linkedin' },
   { name: 'Email', url: `mailto:${CONTACT.email}`, icon: 'Mail' },
 ];
+
+
