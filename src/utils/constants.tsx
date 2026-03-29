@@ -76,7 +76,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'oddstudio-vision',
     title: 'Odd Studio Vision Website',
-    description: 'Built responsive website for Odd Studio Vision showcasing projects and services with interactive components, smooth navigation, and modern UI/UX.',
+    description: 'The Odd Studio Vision website is built to showcase a creative advertising and digital branding agency that helps businesses express their identity, connect with audiences, and grow their presence through impactful visual storytelling and strategic digital services. The agency emphasizes creative innovation, blending bold design with strategic precision to craft memorable brand experiences that stand out in competitive markets. It highlights their services such as videography, photography, branding strategy, and online marketing — each focused on building compelling visual narratives and helping clients communicate their vision effectively. The site serves both as a portfolio and a lead-generation platform for potential clients seeking creative digital solutions.',
     image: '/projects/oddstudio.jpg',
     technologies: ['Next.js', 'React', 'TailwindCSS'],
     liveDemo: 'https://oddstudiovision.com/',
