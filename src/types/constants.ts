@@ -60,6 +60,7 @@ export const PROJECTS: Project[] = [
     image: '/projects/ecommerce.jpg',
     technologies: ['React', 'JavaScript', 'Node.js', 'MySQL', 'TailwindCSS'],
     github: 'https://github.com/Md-Mohimul-Alam/Md-Mohimul-Alam-Intern_Project_E-Commerce',
+    liveDemo: 'https://dhakaagro.vercel.app/',
     featured: false,
     category: 'fullstack',
   },
