@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import PreLoader from './components/PreLoader';
 import { Hero } from './components/sections/Hero';
+import Education from './components/sections/Education';  // ✅ default import
 import { Skills } from './components/sections/Skills';
 import { Experience } from './components/sections/Experience';
 import { Projects } from './components/sections/Projects';
@@ -21,6 +22,7 @@ const App: React.FC = () => {
 
   const navigationItems = [
     { label: 'Home', href: '#home' },
+    { label: 'Education', href: '#education' },
     { label: 'Skills', href: '#skills' },
     { label: 'Experience', href: '#experience' },
     { label: 'Projects', href: '#projects' },
@@ -28,7 +30,6 @@ const App: React.FC = () => {
     { label: 'Certifications', href: '#certifications' },
   ];
 
-  // Show preloader while loading
   if (isLoading) {
     return <PreLoader onComplete={handleLoadingComplete} />;
   }
@@ -39,7 +40,6 @@ const App: React.FC = () => {
       <nav className="fixed top-0 z-50 w-full border-b border-slate-800 bg-slate-950/80 backdrop-blur-md">
         <div className="mx-auto max-w-7xl px-4 py-4">
           <div className="flex items-center justify-between">
-            {/* Logo */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -49,15 +49,14 @@ const App: React.FC = () => {
             >
               <a href="#home">
                 <img
-                    src="/profile/profile-photo.jpeg"
-                    alt="MD Mohimul Alam"
-                    className="w-full h-full object-cover"
-                  style={{ width: '40px', height: '40px', borderRadius: '50%' }}  
-                  />
+                  src="/profile/profile-photo.jpeg"
+                  alt="MD Mohimul Alam"
+                  className="w-full h-full object-cover"
+                  style={{ width: '40px', height: '40px', borderRadius: '50%' }}
+                />
               </a>
             </motion.div>
 
-            {/* Desktop Menu */}
             <div className="hidden items-center gap-8 md:flex">
               {navigationItems.map((item, index) => (
                 <motion.a
@@ -73,7 +72,6 @@ const App: React.FC = () => {
               ))}
             </div>
 
-            {/* CTA Button */}
             <motion.a
               href={`mailto:${CONTACT.email}`}
               initial={{ opacity: 0, x: 20 }}
@@ -85,27 +83,30 @@ const App: React.FC = () => {
               Contact
             </motion.a>
 
-            {/* Mobile Menu Button */}
             <motion.button
               onClick={() => setIsNavOpen(!isNavOpen)}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               className="md:hidden"
             >
-              <motion.svg 
-                className="h-6 w-6 text-white" 
-                fill="none" 
-                stroke="currentColor" 
+              <motion.svg
+                className="h-6 w-6 text-white"
+                fill="none"
+                stroke="currentColor"
                 viewBox="0 0 24 24"
                 animate={{ rotate: isNavOpen ? 90 : 0 }}
                 transition={{ duration: 0.3 }}
               >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={isNavOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d={isNavOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'}
+                />
               </motion.svg>
             </motion.button>
           </div>
 
-          {/* Mobile Menu */}
           {isNavOpen && (
             <motion.div
               initial={{ opacity: 0, y: -10 }}
@@ -133,9 +134,8 @@ const App: React.FC = () => {
         </div>
       </nav>
 
-      {/* Main Content */}
       <main>
-        <motion.section 
+        <motion.section
           id="home"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -143,59 +143,67 @@ const App: React.FC = () => {
         >
           <Hero />
         </motion.section>
-        
+
+        {/* Education Section */}
+        <motion.div
+          id="education"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true, margin: '-100px' }}
+        >
+          <Education />
+        </motion.div>
+
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: '-100px' }}
         >
           <Skills />
         </motion.div>
-        
+
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: '-100px' }}
         >
           <Experience />
         </motion.div>
-        
+
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: '-100px' }}
         >
           <Projects />
         </motion.div>
-        
+
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: '-100px' }}
         >
           <Publications />
         </motion.div>
-        
+
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: '-100px' }}
         >
           <Certifications />
         </motion.div>
       </main>
 
-      {/* Footer */}
       <footer className="border-t border-slate-800 bg-slate-950 py-12 px-4">
         <div className="mx-auto max-w-6xl">
-          {/* Footer Content */}
           <div className="mb-8 grid grid-cols-1 gap-8 md:grid-cols-3">
-            {/* Brand */}
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -210,7 +218,6 @@ const App: React.FC = () => {
               <p className="text-slate-400">Frontend Developer | Blockchain Researcher</p>
             </motion.div>
 
-            {/* Quick Links */}
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -231,7 +238,6 @@ const App: React.FC = () => {
               </div>
             </motion.div>
 
-            {/* Social Links */}
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -266,7 +272,6 @@ const App: React.FC = () => {
             </motion.div>
           </div>
 
-          {/* Divider */}
           <div className="border-t border-slate-800 py-8">
             <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
               <p className="text-slate-500">© 2025 MD Mohimul Alam. All rights reserved.</p>

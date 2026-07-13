@@ -1,18 +1,30 @@
+// src/components/sections/Projects.tsx
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ProjectCard } from '../common/ProjectCard';
 import { PROJECTS } from '../../utils/constants';
 import { Project } from '../../types';
-import { staggerContainer } from '../../utils/animations'; // Removed fadeInUp import
+import { staggerContainer } from '../../utils/animations';
 
 type Category = 'all' | 'blockchain' | 'frontend' | 'fullstack';
 
 export const Projects: React.FC = () => {
   const [filter, setFilter] = useState<Category>('all');
 
+  // Filter projects by category
   const filteredProjects: Project[] = filter === 'all'
     ? PROJECTS
     : PROJECTS.filter(project => project.category === filter);
+
+  // Sort: projects with liveDemo come first
+  const sortedProjects = [...filteredProjects].sort((a, b) => {
+    const aHasLive = !!a.liveDemo;
+    const bHasLive = !!b.liveDemo;
+    if (aHasLive && !bHasLive) return -1;
+    if (!aHasLive && bHasLive) return 1;
+    return 0; // keep original order for projects with same liveDemo status
+  });
 
   const categoryCounts = {
     all: PROJECTS.length,
@@ -70,21 +82,21 @@ export const Projects: React.FC = () => {
           ))}
         </motion.div>
 
-        {/* Projects Grid */}
+        {/* Projects Grid – using sorted projects */}
         <motion.div
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-50px' }}
-          className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 "
+          className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
         >
-          {filteredProjects.map((project, index) => (
+          {sortedProjects.map((project, index) => (
             <ProjectCard key={project.id} project={project} index={index} />
           ))}
         </motion.div>
 
         {/* Empty State */}
-        {filteredProjects.length === 0 && (
+        {sortedProjects.length === 0 && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

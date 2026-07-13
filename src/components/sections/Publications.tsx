@@ -21,10 +21,11 @@ interface Publication {
 const PUBLICATIONS: Publication[] = [
   {
     id: 'pub-1',
-    title: 'Blockchain-Based Voting System with Hyperledger Fabric and React Interface',
+    title: 'A Blockchain-Based Voting System Using Hyperledger Fabric with a React Interface',
     authors: ['MD Mohimul Alam'],
     conference: 'Springer CCIS, ICDSAIA 2025',
     year: '2025',
+    doi: '10.1007/978-3-032-11352-8_22',
     pdfUrl: '/publications/voting-paper.pdf',
     abstract: 'This paper presents a comprehensive blockchain-based voting system implemented using Hyperledger Fabric with a modern React interface, ensuring secure and transparent electoral processes.',
     keywords: ['Blockchain', 'Hyperledger Fabric', 'Voting System', 'React', 'Smart Contracts'],
@@ -51,14 +52,15 @@ const PUBLICATIONS: Publication[] = [
   },
   {
     id: 'pub-4',
-    title: 'Extended Blockchain Voting Framework with Zero-Knowledge Proofs and Threshold Encryption',
+    title: 'An Extended Formal Framework for Blockchain-Based Voting Systems with Advanced Cryptographic and Performance Enhancements',
     authors: ['MD Mohimul Alam'],
-    journal: 'SN Computer Science',
-    year: '2025',
+    journal: 'Springer SN Computer Science',
+    year: '2026',
+    doi: '10.1007/s42979-026-05127-w',
     pdfUrl: '/publications/Extend.pdf',
     abstract: 'Journal extension in progress presenting an advanced blockchain voting framework incorporating Zero-Knowledge Proofs for voter privacy and Threshold Encryption for enhanced security and auditability.',
     keywords: ['Blockchain', 'Zero-Knowledge Proofs', 'Threshold Encryption', 'Voting System', 'Cryptography'],
-    status: 'preprint',
+    status: 'published',
   },
 ];
 

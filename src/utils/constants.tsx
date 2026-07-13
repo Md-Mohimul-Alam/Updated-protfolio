@@ -1,3 +1,5 @@
+// src/utils/constants.ts
+
 import { Project, Experience, Certification, Skill } from '../types';
 
 export const PROJECTS: Project[] = [
@@ -5,10 +7,10 @@ export const PROJECTS: Project[] = [
     id: 'blockchain-voting',
     title: 'Blockchain-Based Voting System',
     description: 'Enterprise-grade voting platform with 4 organizations, secure encrypted voting, and real-time auditing. Implemented Zero-Knowledge Proofs and Threshold Encryption.',
-    image: '/projects/Admin-new.png',
+    image: '/projects/voting.jpg',
     technologies: ['Hyperledger Fabric', 'React', 'Node.js', 'Zero-Knowledge Proofs'],
     github: 'https://github.com/Md-Mohimul-Alam/blockchain-voting-system',
-    featured: true,
+    featured: false,
     category: 'blockchain',
   },
   {
@@ -18,17 +20,17 @@ export const PROJECTS: Project[] = [
     image: '/projects/healthcare.jpg',
     technologies: ['Hyperledger Fabric', 'React', 'Node.js', 'MongoDB'],
     github: 'https://github.com/Md-Mohimul-Alam/HMS',
-    featured: true,
+    featured: false,
     category: 'blockchain',
   },
   {
     id: 'health-monitoring',
     title: 'ESP32-Based Health Monitoring System',
     description: 'Real-time patient vitals monitoring using ECG and SpO2 sensors integrated with Hyperledger Fabric blockchain. 95.4% ECG and 93.8% SpO2 accuracy.',
-    image: '/projects/circuitDiagram.jpeg',
+    image: '/projects/health-iot.jpg',
     technologies: ['ESP32', 'Hyperledger Fabric', 'React', 'MAX30102', 'AD8232'],
     github: 'https://github.com/Md-Mohimul-Alam',
-    featured: true,
+    featured: false,
     category: 'fullstack',
   },
   {
@@ -39,6 +41,17 @@ export const PROJECTS: Project[] = [
     technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'JWT', 'TailwindCSS'],
     github: 'https://github.com/Md-Mohimul-Alam/Perfume',
     liveDemo: 'https://luxeperfume.netlify.app',
+    featured: true,
+    category: 'fullstack',
+  },
+  {
+    id: 'perfume-stock-management',
+    title: 'Perfume Stock Management System',
+    description: 'Inventory and stock control system for perfume retail, featuring real‑time stock tracking, low‑stock alerts, and supplier management with a clean dashboard.',
+    image: '/projects/perfume-stock.jpg',  // Add your own image
+    technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'TailwindCSS'],
+    github: 'https://github.com/Md-Mohimul-Alam', // Update with actual repo if available
+    liveDemo: 'https://perfume-stock-management-system-545.vercel.app/',
     featured: true,
     category: 'fullstack',
   },
@@ -73,16 +86,6 @@ export const PROJECTS: Project[] = [
     featured: false,
     category: 'frontend',
   },
-  {
-    id: 'oddstudio-vision',
-    title: 'Odd Studio Vision Website',
-    description: 'The Odd Studio Vision website showcases a creative advertising and digital branding agency that helps businesses build their identity and connect with audiences. It highlights services like videography, photography, branding, and online marketing, combining bold design with strategic precision to create memorable brand experiences. The site serves as both a portfolio and a platform to attract potential clients.',
-    image: '/projects/oddstudio.jpg',
-    technologies: ['Next.js', 'React', 'TailwindCSS'],
-    liveDemo: 'https://oddstudiovision.com/',
-    featured: false,
-    category: 'frontend',
-  },
 ];
 
 export const SKILLS: Skill[] = [
@@ -103,7 +106,7 @@ export const SKILLS: Skill[] = [
   },
   {
     category: 'Web3',
-    skills: ['Solidity', 'Web3.js',],
+    skills: ['Solidity', 'Web3.js'],
     proficiency: 60,
   },
   {
@@ -177,27 +180,77 @@ export const CERTIFICATIONS: Certification[] = [
 
 export const EXPERIENCE: Experience[] = [
   {
-    id: 'shop-online-ny',
+    id: 'shop-online-ny-react',
     company: 'Shop Online New York',
-    position: 'React Developer - Remote',
+    position: 'React Developer',
     duration: 'Sep 2025 – Present',
     description: [
-      'Developed responsive e-commerce frontend using React.js and TailwindCSS',
-      'Integrated API endpoints and implemented TypeScript for type safety',
-      'Collaborated with team to optimize performance and UX',
+      'Built scalable, responsive web applications using React.js, TypeScript, Tailwind CSS, and Redux Toolkit.',
+      'Implemented secure JWT authentication with session persistence and token refresh.',
+      'Developed Node.js/Express proxy services for secure third-party API integration.',
+      'Created reusable UI components, multi-step forms, and OTP verification flows.',
+      'Managed global application state with Redux Toolkit for consistent data handling.',
+      'Refactored legacy code into modular, maintainable, and scalable architecture.',
+      'Collaborated with cross-functional teams to deliver accessible, high-quality interfaces.',
+      'Optimized frontend performance, code quality, and cross-device compatibility.',
+      'Wrote clean, maintainable code following modern React and TypeScript best practices.',
+      'Improved reliability through unit testing, code reviews, and continuous optimization.',
     ],
-    technologies: ['React', 'TypeScript', 'TailwindCSS'],
+    technologies: ['React.js', 'TypeScript', 'TailwindCSS', 'Redux Toolkit', 'Node.js', 'Express.js', 'JWT', 'Jest'],
+  },
+  {
+    id: 'shop-online-ny-intern',
+    company: 'Shop Online New York',
+    position: 'Frontend Developer Intern',
+    duration: 'Sep 2025 – Dec 2025',
+    description: [
+      'Developed responsive e-commerce interfaces using React.js and Tailwind CSS.',
+      'Integrated REST APIs and improved code reliability with TypeScript.',
+      'Enhanced application performance and user experience with the development team.',
+    ],
+    technologies: ['React.js', 'TypeScript', 'TailwindCSS'],
+  },
+  {
+    id: 'luxe-perfum',
+    company: 'Luxe Perfum · Self-employed',
+    position: 'Founder & Owner',
+    duration: 'Aug 2025 – Present',
+    description: [
+      'Founded and manage an independent fragrance brand.',
+      'Develop custom perfume formulations with optimized scent performance.',
+      'Oversee sourcing, inventory, pricing, fulfillment, and customer support.',
+      'Analyze customer preferences to provide personalized recommendations.',
+      'Execute digital marketing campaigns to increase brand awareness and sales.',
+      'Strengthen customer retention through feedback-driven product improvements.',
+      'Research market trends to identify new product opportunities.',
+      'Manage branding, packaging, and overall product presentation.',
+    ],
+    technologies: ['Entrepreneurship', 'Business Development', 'Marketing', 'Product Development', 'Inventory Management'],
+  },
+  {
+    id: 'excelerate-growth-hacking',
+    company: 'Excelerate',
+    position: 'Growth Hacking Intern',
+    duration: 'Aug 2025 – Sep 2025',
+    description: [
+      'Executed growth hacking strategies to improve user acquisition and engagement.',
+      'Supported digital marketing initiatives through data-driven experimentation.',
+    ],
+    technologies: ['Growth Hacking', 'Business Growth Strategies'],
   },
   {
     id: 'betafore',
     company: 'BetaFore - Software & Digital Media',
     position: 'React Developer Intern',
-    duration: 'May 2024 – Oct 2024',
+    duration: 'May 2024 – Aug 2024',
     description: [
-      'Built e-commerce UI with responsive product catalog and filtering',
-      'Worked with backend team for API integration',
+      'Developed a responsive e-commerce application using React and Vite.',
+      'Integrated Google Maps and Leaflet for location-based features.',
+      'Built modern UIs with Material-UI and Bootstrap.',
+      'Consumed REST APIs with Axios and optimized local storage using IndexedDB.',
+      'Implemented SPA routing with React Router DOM.',
     ],
-    technologies: ['React', 'JavaScript', 'CSS'],
+    technologies: ['React', 'JavaScript', 'CSS', 'Material-UI', 'Bootstrap', 'Leaflet', 'Google Maps API', 'Axios', 'IndexedDB', 'Vite'],
   },
   {
     id: 'techtrioz',
@@ -205,8 +258,8 @@ export const EXPERIENCE: Experience[] = [
     position: 'Data Entry Specialist',
     duration: 'Jan 2023 – Feb 2024',
     description: [
-      'Managed digital data entry systems and geospatial data processing',
-      'Maintained 99.8% data accuracy',
+      'Managed geospatial and business data with high accuracy.',
+      'Maintained a 99.8% accuracy rate across large-scale data processing tasks.',
     ],
     technologies: ['Data Processing', 'GIS', 'Database Management'],
   },
