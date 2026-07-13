@@ -2,16 +2,16 @@
 
 import React, { useRef, useMemo } from 'react';
 import { useFrame } from '@react-three/fiber';
-import { Group, Mesh, BufferGeometry, Float32BufferAttribute } from 'three';
+import { Group, Mesh } from 'three';
 
 interface BlockchainNetworkProps {
   scale?: number;
   colorScheme?: 'blue' | 'purple' | 'pink';
 }
 
-export const BlockchainNetwork: React.FC<BlockchainNetworkProps> = React.memo(({ 
-  scale = 1, 
-  colorScheme = 'blue' 
+export const BlockchainNetwork: React.FC<BlockchainNetworkProps> = React.memo(({
+  scale = 1,
+  colorScheme = 'blue'
 }) => {
   const groupRef = useRef<Group>(null);
   const nodesRef = useRef<Mesh[]>([]);
@@ -27,17 +27,6 @@ export const BlockchainNetwork: React.FC<BlockchainNetworkProps> = React.memo(({
   };
 
   const colors = colorSets[colorScheme];
-
-  // ─── Create geometries once with useMemo ───
-  const geometries = useMemo(() => {
-    return {
-      sphere: new Float32Array([0.4, 32, 32]),
-      tetrahedron: new Float32Array([0.15]),
-      octahedron: new Float32Array([0.25]),
-      torus: new Float32Array([4.8, 0.015, 16, 100]),
-      innerTorus: new Float32Array([2.4, 0.012, 16, 100]),
-    };
-  }, []);
 
   // ─── Node positions ───
   const outerNodes = useMemo(() => {
@@ -64,7 +53,7 @@ export const BlockchainNetwork: React.FC<BlockchainNetworkProps> = React.memo(({
 
   // ─── Orbiting particles ───
   const orbitParticles = useMemo(() => {
-    return Array.from({ length: 30 }, (_, i) => {
+    return Array.from({ length: 30 }, () => {
       const angle = Math.random() * Math.PI * 2;
       const radius = 2 + Math.random() * 3;
       const height = (Math.random() - 0.5) * 2;

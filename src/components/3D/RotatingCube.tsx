@@ -2,7 +2,7 @@
 
 import React, { useRef, useMemo } from 'react';
 import { useFrame } from '@react-three/fiber';
-import { Mesh, BoxGeometry, EdgesGeometry, Group, SphereGeometry, Vector3 } from 'three';
+import { Mesh, BoxGeometry, EdgesGeometry, Group } from 'three';
 
 interface RotatingCubeProps {
   scale?: number;
@@ -37,10 +37,10 @@ export const RotatingCube: React.FC<RotatingCubeProps> = React.memo(({
   const isNeon = colorScheme === 'neon';
 
   // ─── Pre-compute geometries ───
-  const { boxGeo, edgesGeo } = useMemo(() => {
+  const { edgesGeo } = useMemo(() => {
     const box = new BoxGeometry(2 * scale, 2 * scale, 2 * scale);
     const edges = new EdgesGeometry(box);
-    return { boxGeo: box, edgesGeo: edges };
+    return { edgesGeo: edges };
   }, [scale]);
 
   // ─── Orbiting particles ───
@@ -145,27 +145,8 @@ export const RotatingCube: React.FC<RotatingCubeProps> = React.memo(({
     }
   });
 
-  // ─── Helper: get color at time ───
-  const getColor = (t: number) => {
-    if (isRainbow) {
-      const hue = (t * 0.08) % 1;
-      return `hsl(${hue * 360}, 90%, 65%)`;
-    }
-    return colors.main;
-  };
-
-  // ─── Helper: get glow color ───
-  const getGlowColor = (t: number) => {
-    if (isRainbow) {
-      const hue = (t * 0.08 + 0.5) % 1;
-      return `hsl(${hue * 360}, 100%, 70%)`;
-    }
-    return isNeon ? colors.glow : colors.glow;
-  };
-
   const mainColor = isRainbow ? '#3b82f6' : colors.main;
   const glowColor = isRainbow ? '#8b5cf6' : colors.glow;
-  const lightColor = isRainbow ? '#60a5fa' : colors.light;
 
   return (
     <group>
