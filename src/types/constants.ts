@@ -277,4 +277,5 @@ export const SOCIAL_LINKS = [
   { name: 'GitHub', url: CONTACT.github, icon: 'Github' },
   { name: 'LinkedIn', url: CONTACT.linkedin, icon: 'Linkedin' },
   { name: 'Email', url: `mailto:${CONTACT.email}`, icon: 'Mail' },
+  { name: 'Phone', url: `tel:${CONTACT.phone}`, icon: 'Phone' },
 ];
