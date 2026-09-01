@@ -11,7 +11,7 @@ export const PROJECTS: Project[] = [
     technologies: ['Hyperledger Fabric', 'React', 'Node.js', 'Zero-Knowledge Proofs'],
     github: 'https://github.com/Md-Mohimul-Alam/blockchain-voting-system',
     featured: false,
-    category: 'blockchain',
+    category: ['blockchain'],
   },
   {
     id: 'healthcare-network',
@@ -21,7 +21,7 @@ export const PROJECTS: Project[] = [
     technologies: ['Hyperledger Fabric', 'React', 'Node.js', 'MongoDB'],
     github: 'https://github.com/Md-Mohimul-Alam/HMS',
     featured: false,
-    category: 'blockchain',
+    category: ['blockchain'],
   },
   {
     id: 'health-monitoring',
@@ -31,7 +31,18 @@ export const PROJECTS: Project[] = [
     technologies: ['ESP32', 'Hyperledger Fabric', 'React', 'MAX30102', 'AD8232'],
     github: 'https://github.com/Md-Mohimul-Alam',
     featured: false,
-    category: 'fullstack',
+    category: ['blockchain', 'fullstack'],
+  },
+  {
+    id: 'oddstudio-vision',
+    title: 'Oddstudio Vision',
+    description: 'Creative studio showcase website featuring modern animations, interactive UI, and immersive brand storytelling.',
+    image: '/projects/oddstudio.jpg',
+    technologies: ['React', 'Next.js', 'TailwindCSS', 'Framer Motion'],
+    github: '',
+    liveDemo: 'https://oddstudiovision.netlify.app',
+    featured: false,
+    category: ['frontend'],
   },
   {
     id: 'perfume-ecommerce',
@@ -42,18 +53,18 @@ export const PROJECTS: Project[] = [
     github: 'https://github.com/Md-Mohimul-Alam/Perfume',
     liveDemo: 'https://luxeperfume.netlify.app',
     featured: true,
-    category: 'fullstack',
+    category: ['fullstack'],
   },
   {
     id: 'perfume-stock-management',
     title: 'Perfume Stock Management System',
     description: 'Inventory and stock control system for perfume retail, featuring real‑time stock tracking, low‑stock alerts, and supplier management with a clean dashboard.',
-    image: '/projects/perfume-stock.jpg',  // Add your own image
+    image: '/projects/perfume-stock.jpg',
     technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'TailwindCSS'],
-    github: 'https://github.com/Md-Mohimul-Alam', // Update with actual repo if available
+    github: 'https://github.com/Md-Mohimul-Alam',
     liveDemo: 'https://perfume-stock-management-system-545.vercel.app/',
     featured: true,
-    category: 'fullstack',
+    category: ['fullstack'],
   },
   {
     id: 'expense-tracker',
@@ -64,7 +75,7 @@ export const PROJECTS: Project[] = [
     github: 'https://github.com/Md-Mohimul-Alam/Personal-Expense-Tracker',
     liveDemo: 'https://personal-expense-tracker-henna.vercel.app/expenses',
     featured: false,
-    category: 'fullstack',
+    category: ['fullstack'],
   },
   {
     id: 'ecommerce',
@@ -75,7 +86,7 @@ export const PROJECTS: Project[] = [
     github: 'https://github.com/Md-Mohimul-Alam/Md-Mohimul-Alam-Intern_Project_E-Commerce',
     liveDemo: 'https://dhakaagro.vercel.app/',
     featured: false,
-    category: 'fullstack',
+    category: ['fullstack'],
   },
   {
     id: 'santaran',
@@ -84,10 +95,11 @@ export const PROJECTS: Project[] = [
     image: '/projects/santaran.jpg',
     technologies: ['Nuxt.js', 'Vue.js', 'TailwindCSS'],
     featured: false,
-    category: 'frontend',
+    category: ['frontend'],
   },
 ];
 
+// SKILLS, CERTIFICATIONS, EXPERIENCE, CONTACT, SOCIAL_LINKS remain unchanged
 export const SKILLS: Skill[] = [
   {
     category: 'Frontend',

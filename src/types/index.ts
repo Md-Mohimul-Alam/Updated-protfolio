@@ -9,7 +9,7 @@ export interface Project {
   github?: string;
   liveDemo?: string;
   featured: boolean;
-  category: 'blockchain' | 'frontend' | 'fullstack';
+  category: ('blockchain' | 'frontend' | 'fullstack')[];
 }
 
 export interface Skill {
