@@ -41,7 +41,7 @@ export const PROJECTS: Project[] = [
     technologies: ['React', 'Next.js', 'TailwindCSS', 'Framer Motion'],
     github: '',
     liveDemo: 'https://oddstudiovision.netlify.app',
-    featured: false,
+    featured: true,
     category: ['frontend'],
   },
   {
