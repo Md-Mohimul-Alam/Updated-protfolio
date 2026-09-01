@@ -12,10 +12,10 @@ type Category = 'all' | 'blockchain' | 'frontend' | 'fullstack';
 export const Projects: React.FC = () => {
   const [filter, setFilter] = useState<Category>('all');
 
-  // Filter projects by category
+  // Filter projects by category – use .includes() because category is now an array
   const filteredProjects: Project[] = filter === 'all'
     ? PROJECTS
-    : PROJECTS.filter(project => project.category === filter);
+    : PROJECTS.filter(project => project.category.includes(filter));
 
   // Sort: projects with liveDemo come first
   const sortedProjects = [...filteredProjects].sort((a, b) => {
@@ -26,11 +26,12 @@ export const Projects: React.FC = () => {
     return 0; // keep original order for projects with same liveDemo status
   });
 
+  // Update counts using .includes()
   const categoryCounts = {
     all: PROJECTS.length,
-    blockchain: PROJECTS.filter(p => p.category === 'blockchain').length,
-    frontend: PROJECTS.filter(p => p.category === 'frontend').length,
-    fullstack: PROJECTS.filter(p => p.category === 'fullstack').length,
+    blockchain: PROJECTS.filter(p => p.category.includes('blockchain')).length,
+    frontend: PROJECTS.filter(p => p.category.includes('frontend')).length,
+    fullstack: PROJECTS.filter(p => p.category.includes('fullstack')).length,
   };
 
   return (
