@@ -90,23 +90,23 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'santaran',
-    title: 'Santaran Project',
-    description: 'Responsive web platform for multidisciplinary artist-run organization with interactive dashboards and mobile-first design.',
+    title: 'Santaran Art Organization — Public Site',
+    description: 'Multidisciplinary artist-run organization platform: dynamic page hero carousels, live events, and exhibition listings driven by a headless CMS. Built with React + Vite.',
     image: '/projects/santaran.jpg',
     liveDemo: 'https://santaranartorganization.netlify.app/',
-    technologies: ['Nuxt.js', 'Vue.js', 'TailwindCSS'],
+    technologies: ['React', 'Vite', 'TailwindCSS', 'React Router', 'Headless CMS'],
     featured: false,
     category: ['frontend'],
   },
   {
     id: 'CMS',
-    title: 'Content Management System (CMS)',
-    description: 'Custom CMS for managing website content, user roles, and media assets with a clean admin interface and real-time content updates.',
+    title: 'Santaran CMS',
+    description: 'Custom CMS for a cultural organization: hero-carousel management per page, event and exhibition CRUD with image uploads via Cloudinary, JWT auth, and role-based access.',
     image: '/projects/cms.jpg',
-    technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'TailwindCSS'],
+    technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Cloudinary', 'JWT', 'Vercel'],
     github: '',
     liveDemo: 'https://santarancms-nine.vercel.app/',
-    featured: false,
+    featured: true,
     category: ['fullstack'],
   }
 ];
@@ -200,7 +200,7 @@ export const CERTIFICATIONS: Certification[] = [
     credlyUrl: '',
     category: 'Marketing',
   },
-    {
+  {
     id: 'coursera-1694qdw7f2po',
     name: 'TODO: course name from the form',
     issuer: 'TODO: issuing organization (e.g. Coursera / DeepLearning.AI / Google)',
