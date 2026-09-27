@@ -40,7 +40,7 @@ export const PROJECTS: Project[] = [
     image: '/projects/oddstudio.jpg',
     technologies: ['React', 'Next.js', 'TailwindCSS', 'Framer Motion'],
     github: '',
-    liveDemo: 'https://oddstudiovision.netlify.app',
+    liveDemo: 'https://oddstudiovision.netlify.app/',
     featured: true,
     category: ['frontend'],
   },
@@ -51,7 +51,7 @@ export const PROJECTS: Project[] = [
     image: '/projects/perfume.jpg',
     technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'JWT', 'TailwindCSS'],
     github: 'https://github.com/Md-Mohimul-Alam/Perfume',
-    liveDemo: 'https://luxeperfume.netlify.app',
+    liveDemo: 'https://luxeperfume.netlify.app/',
     featured: true,
     category: ['fullstack'],
   },
@@ -73,7 +73,7 @@ export const PROJECTS: Project[] = [
     image: '/projects/expense.jpg',
     technologies: ['React', 'TypeScript', 'Node.js', 'Express', 'MongoDB'],
     github: 'https://github.com/Md-Mohimul-Alam/Personal-Expense-Tracker',
-    liveDemo: 'https://personal-expense-tracker-henna.vercel.app/expenses',
+    liveDemo: 'https://personal-expense-tracker-henna.vercel.app/',
     featured: false,
     category: ['fullstack'],
   },
@@ -93,10 +93,22 @@ export const PROJECTS: Project[] = [
     title: 'Santaran Project',
     description: 'Responsive web platform for multidisciplinary artist-run organization with interactive dashboards and mobile-first design.',
     image: '/projects/santaran.jpg',
+    liveDemo: 'https://santaranartorganization.netlify.app/',
     technologies: ['Nuxt.js', 'Vue.js', 'TailwindCSS'],
     featured: false,
     category: ['frontend'],
   },
+  {
+    id: 'CMS',
+    title: 'Content Management System (CMS)',
+    description: 'Custom CMS for managing website content, user roles, and media assets with a clean admin interface and real-time content updates.',
+    image: '/projects/cms.jpg',
+    technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'TailwindCSS'],
+    github: '',
+    liveDemo: 'https://santarancms-nine.vercel.app/',
+    featured: false,
+    category: ['fullstack'],
+  }
 ];
 
 // SKILLS, CERTIFICATIONS, EXPERIENCE, CONTACT, SOCIAL_LINKS remain unchanged
@@ -114,22 +126,22 @@ export const SKILLS: Skill[] = [
   {
     category: 'Blockchain',
     skills: ['Hyperledger Fabric', 'Smart Contracts', 'Zero-Knowledge Proofs', 'Threshold Encryption'],
-    proficiency: 90,
+    proficiency: 85,
   },
   {
     category: 'Web3',
     skills: ['Solidity', 'Web3.js'],
-    proficiency: 60,
+    proficiency: 50,
   },
   {
     category: 'DevOps',
     skills: ['Docker', 'Git', 'CI/CD', 'Linux', 'AWS'],
-    proficiency: 78,
+    proficiency: 70,
   },
   {
     category: 'IoT & Embedded',
     skills: ['ESP32', 'Arduino', 'Embedded Systems', 'Sensor Integration'],
-    proficiency: 82,
+    proficiency: 75,
   },
 ];
 
@@ -187,6 +199,15 @@ export const CERTIFICATIONS: Certification[] = [
     badgeUrl: 'https://excelerateuserprofile.s3.ap-south-1.amazonaws.com/WebsiteImageFiles/Badge/Badge_0000000010KRZVQY9TWPXFJPKG_image_link.png',
     credlyUrl: '',
     category: 'Marketing',
+  },
+    {
+    id: 'coursera-1694qdw7f2po',
+    name: 'TODO: course name from the form',
+    issuer: 'TODO: issuing organization (e.g. Coursera / DeepLearning.AI / Google)',
+    date: 'TODO: issue year, e.g. 2025',
+    badgeUrl: '', // Coursera doesn't provide a Credly badge image
+    credlyUrl: 'https://www.coursera.org/account/accomplishments/records/1694QDW7F2PO',
+    category: 'Development',
   },
 ];
 
