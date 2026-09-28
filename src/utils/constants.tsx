@@ -1,325 +1,659 @@
 // src/utils/constants.ts
 
-import { Project, Experience, Certification, Skill } from '../types';
+import {
+  Project,
+  Experience,
+  Certification,
+  Skill,
+} from "../types";
 
 export const PROJECTS: Project[] = [
   {
-    id: 'blockchain-voting',
-    title: 'Blockchain-Based Voting System',
-    description: 'Enterprise-grade voting platform with 4 organizations, secure encrypted voting, and real-time auditing. Implemented Zero-Knowledge Proofs and Threshold Encryption.',
-    image: '/projects/voting.jpg',
-    technologies: ['Hyperledger Fabric', 'React', 'Node.js', 'Zero-Knowledge Proofs'],
-    github: 'https://github.com/Md-Mohimul-Alam/blockchain-voting-system',
+    id: "blockchain-voting",
+    title: "Blockchain-Based Voting System",
+    description:
+      "Enterprise-grade voting platform with 4 organizations, secure encrypted voting, and real-time auditing. Implemented Zero-Knowledge Proofs and Threshold Encryption.",
+    image: "/projects/voting.jpg",
+    technologies: [
+      "Hyperledger Fabric",
+      "React",
+      "Node.js",
+      "Zero-Knowledge Proofs",
+    ],
+    github:
+      "https://github.com/Md-Mohimul-Alam/blockchain-voting-system",
     featured: false,
-    category: ['blockchain'],
+    category: ["blockchain"],
   },
+
   {
-    id: 'healthcare-network',
-    title: 'Healthcare Data Exchange Network',
-    description: 'Private blockchain for 3 healthcare institutions with granular RBAC and real-time dashboard. Ensured 98% data consistency in clinical simulations.',
-    image: '/projects/healthcare.jpg',
-    technologies: ['Hyperledger Fabric', 'React', 'Node.js', 'MongoDB'],
-    github: 'https://github.com/Md-Mohimul-Alam/HMS',
+    id: "healthcare-network",
+    title: "Healthcare Data Exchange Network",
+    description:
+      "Private blockchain for 3 healthcare institutions with granular RBAC and real-time dashboard. Ensured 98% data consistency in clinical simulations.",
+    image: "/projects/healthcare.jpg",
+    technologies: [
+      "Hyperledger Fabric",
+      "React",
+      "Node.js",
+      "MongoDB",
+    ],
+    github:
+      "https://github.com/Md-Mohimul-Alam/HMS",
     featured: false,
-    category: ['blockchain'],
+    category: ["blockchain"],
   },
+
   {
-    id: 'health-monitoring',
-    title: 'ESP32-Based Health Monitoring System',
-    description: 'Real-time patient vitals monitoring using ECG and SpO2 sensors integrated with Hyperledger Fabric blockchain. 95.4% ECG and 93.8% SpO2 accuracy.',
-    image: '/projects/health-iot.jpg',
-    technologies: ['ESP32', 'Hyperledger Fabric', 'React', 'MAX30102', 'AD8232'],
-    github: 'https://github.com/Md-Mohimul-Alam',
+    id: "health-monitoring",
+    title: "ESP32-Based Health Monitoring System",
+    description:
+      "Real-time patient vitals monitoring using ECG and SpO2 sensors integrated with Hyperledger Fabric blockchain. 95.4% ECG and 93.8% SpO2 accuracy.",
+    image: "/projects/health-iot.jpg",
+    technologies: [
+      "ESP32",
+      "Hyperledger Fabric",
+      "React",
+      "MAX30102",
+      "AD8232",
+    ],
+    github:
+      "https://github.com/Md-Mohimul-Alam",
     featured: false,
-    category: ['blockchain', 'fullstack'],
+    category: [
+      "blockchain",
+      "fullstack",
+    ],
   },
+
   {
-    id: 'oddstudio-vision',
-    title: 'Oddstudio Vision',
-    description: 'Creative studio showcase website featuring modern animations, interactive UI, and immersive brand storytelling.',
-    image: '/projects/oddstudio.jpg',
-    technologies: ['React', 'Next.js', 'TailwindCSS', 'Framer Motion'],
-    github: '',
-    liveDemo: 'https://oddstudiovision.netlify.app/',
+    id: "oddstudio-vision",
+    title: "Oddstudio Vision",
+    description:
+      "Creative studio showcase website featuring modern animations, interactive UI, and immersive brand storytelling.",
+    image: "/projects/oddstudio.jpg",
+    technologies: [
+      "React",
+      "Next.js",
+      "TailwindCSS",
+      "Framer Motion",
+    ],
+    github: "",
+    liveDemo:
+      "https://oddstudiovision.netlify.app/",
     featured: true,
-    category: ['frontend'],
+    category: ["frontend"],
   },
+
   {
-    id: 'perfume-ecommerce',
-    title: 'Perfume E-commerce Platform',
-    description: 'Full-stack perfume e-commerce application with product catalog, shopping cart, user authentication, and admin dashboard for inventory management.',
-    image: '/projects/perfume.jpg',
-    technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'JWT', 'TailwindCSS'],
-    github: 'https://github.com/Md-Mohimul-Alam/Perfume',
-    liveDemo: 'https://luxeperfume.netlify.app/',
+    id: "perfume-ecommerce",
+    title: "Perfume E-commerce Platform",
+    description:
+      "Full-stack perfume e-commerce application with product catalog, shopping cart, user authentication, and admin dashboard for inventory management.",
+    image: "/projects/perfume.jpg",
+    technologies: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "JWT",
+      "TailwindCSS",
+    ],
+    liveDemo:
+      "https://luxeperfume.netlify.app/",
     featured: true,
-    category: ['fullstack'],
+    category: ["fullstack"],
   },
   {
-    id: 'perfume-stock-management',
-    title: 'Perfume Stock Management System',
-    description: 'Inventory and stock control system for perfume retail, featuring real‑time stock tracking, low‑stock alerts, and supplier management with a clean dashboard.',
-    image: '/projects/perfume-stock.jpg',
-    technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'TailwindCSS'],
-    github: 'https://github.com/Md-Mohimul-Alam',
-    liveDemo: 'https://perfume-stock-management-system-545.vercel.app/',
+    id: "zenji-storefront",
+    title: "ZENJI Anime Streetwear Storefront",
+    description:
+      "Responsive anime-inspired streetwear storefront built with React, TypeScript, Vite, Tailwind CSS, and Motion. Features product browsing, size selection, cart management, quantity controls, subtotal calculation, responsive layouts, animations, and keyboard-friendly interactions.",
+    image: "/projects/zenji.jpg",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "TailwindCSS",
+      "Motion",
+      "Lucide React",
+    ],
+    github: "",
+    liveDemo:
+      "https://zenji-store.netlify.app/",
     featured: true,
-    category: ['fullstack'],
+    category: ["frontend"],
   },
+
   {
-    id: 'expense-tracker',
-    title: 'Personal Expense Tracker',
-    description: 'Full-stack expense management app with interactive charts and JWT authentication. Automated financial insights reducing manual tracking by 75%.',
-    image: '/projects/expense.jpg',
-    technologies: ['React', 'TypeScript', 'Node.js', 'Express', 'MongoDB'],
-    github: 'https://github.com/Md-Mohimul-Alam/Personal-Expense-Tracker',
-    liveDemo: 'https://personal-expense-tracker-henna.vercel.app/',
-    featured: false,
-    category: ['fullstack'],
-  },
-  {
-    id: 'ecommerce',
-    title: 'E-commerce Web Application',
-    description: 'Responsive product catalog, shopping cart, and admin dashboard with order management and simulated payment gateway with real-time updates.',
-    image: '/projects/ecommerce.jpg',
-    technologies: ['React', 'JavaScript', 'Node.js', 'MySQL', 'TailwindCSS'],
-    github: 'https://github.com/Md-Mohimul-Alam/Md-Mohimul-Alam-Intern_Project_E-Commerce',
-    liveDemo: 'https://dhakaagro.vercel.app/',
-    featured: false,
-    category: ['fullstack'],
-  },
-  {
-    id: 'santaran',
-    title: 'Santaran Art Organization — Public Site',
-    description: 'Multidisciplinary artist-run organization platform: dynamic page hero carousels, live events, and exhibition listings driven by a headless CMS. Built with React + Vite.',
-    image: '/projects/santaran.jpg',
-    liveDemo: 'https://santaranartorganization.netlify.app/',
-    technologies: ['React', 'Vite', 'TailwindCSS', 'React Router', 'Headless CMS'],
-    featured: false,
-    category: ['frontend'],
-  },
-  {
-    id: 'CMS',
-    title: 'Santaran CMS',
-    description: 'Custom CMS for a cultural organization: hero-carousel management per page, event and exhibition CRUD with image uploads via Cloudinary, JWT auth, and role-based access.',
-    image: '/projects/cms.jpg',
-    technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Cloudinary', 'JWT', 'Vercel'],
-    github: '',
-    liveDemo: 'https://santarancms-nine.vercel.app/',
+    id: "fames-savings-management",
+    title:
+      "FAME'S Organization Savings Management System",
+    description:
+      "Full-stack savings and investment management platform for a group-based organization. Includes member management, monthly contributions, transaction tracking, investments, expenses, ownership calculation, profit distribution, join and exit workflows, notifications, audit logs, reports, role-based access, and a read-only Demo Admin environment with isolated sample data.",
+    image:
+      "/projects/fames-savings.jpg",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "TailwindCSS",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "JWT",
+      "REST API",
+    ],
+    github: "",
+    liveDemo:
+      "https://fames-org-savings-system.vercel.app/",
     featured: true,
-    category: ['fullstack'],
+    category: ["fullstack"],
+  },
+
+  {
+    id: "perfume-stock-management",
+    title:
+      "Perfume Stock Management System",
+    description:
+      "Inventory and stock control system for perfume retail, featuring real-time stock tracking, low-stock alerts, and supplier management with a clean dashboard.",
+    image:
+      "/projects/perfume-stock.jpg",
+    technologies: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "TailwindCSS",
+    ],
+    liveDemo:
+      "https://perfume-stock-management-system-545.vercel.app/",
+    featured: true,
+    category: ["fullstack"],
+  },
+
+  {
+    id: "expense-tracker",
+    title:
+      "Personal Expense Tracker",
+    description:
+      "Full-stack expense management app with interactive charts and JWT authentication. Automated financial insights reducing manual tracking by 75%.",
+    image:
+      "/projects/expense.jpg",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "MongoDB",
+    ],
+    github:
+      "https://github.com/Md-Mohimul-Alam/Personal-Expense-Tracker",
+    liveDemo:
+      "https://personal-expense-tracker-henna.vercel.app/",
+    featured: false,
+    category: ["fullstack"],
+  },
+
+  {
+    id: "santaran",
+    title:
+      "Santaran Art Organization — Public Site",
+    description:
+      "Multidisciplinary artist-run organization platform: dynamic page hero carousels, live events, and exhibition listings driven by a headless CMS. Built with React + Vite.",
+    image:
+      "/projects/santaran.jpg",
+    liveDemo:
+      "https://santaranartorganization.netlify.app/",
+    technologies: [
+      "React",
+      "Vite",
+      "TailwindCSS",
+      "React Router",
+      "Headless CMS",
+    ],
+    featured: false,
+    category: ["frontend"],
+  },
+
+  {
+    id: "CMS",
+    title:
+      "Santaran CMS",
+    description:
+      "Custom CMS for a cultural organization: hero-carousel management per page, event and exhibition CRUD with image uploads via Cloudinary, JWT auth, and role-based access.",
+    image:
+      "/projects/cms.jpg",
+    technologies: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Cloudinary",
+      "JWT",
+      "Vercel",
+    ],
+    github: "",
+    liveDemo:
+      "https://santarancms-nine.vercel.app/",
+    featured: true,
+    category: ["fullstack"],
   },
   {
-    id: 'zenji-store',
-    title: 'Zenji Store',
-    description: 'Modern e-commerce storefront featuring product browsing, shopping cart, responsive UI, and a clean shopping experience.',
-    image: '/projects/zenji-store.jpg',
-    technologies: ['React', 'Vite', 'TailwindCSS', 'React Router'],
-    github: '',
-    liveDemo: 'https://zenji-store.netlify.app/',
+    id: "ecommerce",
+    title:
+      "E-commerce Web Application",
+    description:
+      "Responsive product catalog, shopping cart, and admin dashboard with order management and simulated payment gateway with real-time updates.",
+    image:
+      "/projects/ecommerce.jpg",
+    technologies: [
+      "React",
+      "JavaScript",
+      "Node.js",
+      "MySQL",
+      "TailwindCSS",
+    ],
+    github:
+      "https://github.com/Md-Mohimul-Alam/Md-Mohimul-Alam-Intern_Project_E-Commerce",
+    liveDemo:
+      "https://dhakaagro.vercel.app/",
     featured: false,
-    category: ['frontend'],
-  }
+    category: ["fullstack"],
+  },
 ];
 
-// SKILLS, CERTIFICATIONS, EXPERIENCE, CONTACT, SOCIAL_LINKS remain unchanged
+// --------------------------------------------------
+// SKILLS
+// --------------------------------------------------
+
 export const SKILLS: Skill[] = [
   {
-    category: 'Frontend',
-    skills: ['React.js', 'Next.js', 'TypeScript', 'TailwindCSS', 'Framer Motion', 'Three.js'],
+    category: "Frontend",
+    skills: [
+      "React.js",
+      "Next.js",
+      "TypeScript",
+      "TailwindCSS",
+      "Framer Motion",
+      "Three.js",
+    ],
     proficiency: 95,
   },
+
   {
-    category: 'Backend',
-    skills: ['Node.js', 'Express.js', 'GraphQL', 'REST API', 'MongoDB', 'MySQL'],
+    category: "Backend",
+    skills: [
+      "Node.js",
+      "Express.js",
+      "GraphQL",
+      "REST API",
+      "MongoDB",
+      "MySQL",
+    ],
     proficiency: 85,
   },
+
   {
-    category: 'Blockchain',
-    skills: ['Hyperledger Fabric', 'Smart Contracts', 'Zero-Knowledge Proofs', 'Threshold Encryption'],
+    category: "Blockchain",
+    skills: [
+      "Hyperledger Fabric",
+      "Smart Contracts",
+      "Zero-Knowledge Proofs",
+      "Threshold Encryption",
+    ],
     proficiency: 85,
   },
+
   {
-    category: 'Web3',
-    skills: ['Solidity', 'Web3.js'],
+    category: "Web3",
+    skills: [
+      "Solidity",
+      "Web3.js",
+    ],
     proficiency: 50,
   },
+
   {
-    category: 'DevOps',
-    skills: ['Docker', 'Git', 'CI/CD', 'Linux', 'AWS'],
+    category: "DevOps",
+    skills: [
+      "Docker",
+      "Git",
+      "CI/CD",
+      "Linux",
+      "AWS",
+    ],
     proficiency: 70,
   },
+
   {
-    category: 'IoT & Embedded',
-    skills: ['ESP32', 'Arduino', 'Embedded Systems', 'Sensor Integration'],
+    category: "IoT & Embedded",
+    skills: [
+      "ESP32",
+      "Arduino",
+      "Embedded Systems",
+      "Sensor Integration",
+    ],
     proficiency: 75,
   },
 ];
 
+// --------------------------------------------------
+// CERTIFICATIONS
+// --------------------------------------------------
+
 export const CERTIFICATIONS: Certification[] = [
   {
-    id: 'cisco-ccia',
-    name: 'CCNAv7: Introduction to Networks',
-    issuer: 'Cisco',
-    date: '2022',
-    badgeUrl: 'https://images.credly.com/size/680x680/images/242902b5-f527-42ad-865e-977c9e1b5b58/image.png',
-    credlyUrl: 'https://www.credly.com/badges/75ff6769-1e36-44d2-a7a5-fce98429a971',
-    category: 'Networking',
+    id: "cisco-ccia",
+    name:
+      "CCNAv7: Introduction to Networks",
+    issuer: "Cisco",
+    date: "2022",
+    badgeUrl:
+      "https://images.credly.com/size/680x680/images/242902b5-f527-42ad-865e-977c9e1b5b58/image.png",
+    credlyUrl:
+      "https://www.credly.com/badges/75ff6769-1e36-44d2-a7a5-fce98429a971",
+    category: "Networking",
   },
+
   {
-    id: 'cisco-ccna',
-    name: 'CCNAv7: Switching, Routing, and Wireless Essentials',
-    issuer: 'Cisco',
-    date: '2024',
-    badgeUrl: 'https://images.credly.com/size/680x680/images/f4ccdba9-dd65-4349-baad-8f05df116443/CCNASRWE__1_.png',
-    credlyUrl: 'https://www.credly.com/badges/0b045a72-c003-4aef-bb74-6b91b41d3936',
-    category: 'Networking',
+    id: "cisco-ccna",
+    name:
+      "CCNAv7: Switching, Routing, and Wireless Essentials",
+    issuer: "Cisco",
+    date: "2024",
+    badgeUrl:
+      "https://images.credly.com/size/680x680/images/f4ccdba9-dd65-4349-baad-8f05df116443/CCNASRWE__1_.png",
+    credlyUrl:
+      "https://www.credly.com/badges/0b045a72-c003-4aef-bb74-6b91b41d3936",
+    category: "Networking",
   },
+
   {
-    id: 'ethical-hacker',
-    name: 'Ethical Hacker',
-    issuer: 'Cisco Networking Academy',
-    date: '2024',
-    badgeUrl: 'https://images.credly.com/images/70d71df5-f3dc-4380-9b9d-f22513a70417/CCNAITN__1_.png',
-    credlyUrl: 'https://www.credly.com/users/mohim-reza',
-    category: 'Security',
+    id: "ethical-hacker",
+    name:
+      "Ethical Hacker",
+    issuer:
+      "Cisco Networking Academy",
+    date: "2024",
+    badgeUrl:
+      "https://images.credly.com/images/70d71df5-f3dc-4380-9b9d-f22513a70417/CCNAITN__1_.png",
+    credlyUrl:
+      "https://www.credly.com/users/mohim-reza",
+    category: "Security",
   },
+
   {
-    id: 'HTML Essentials',
-    name: 'HTML Essentials',
-    issuer: 'Issued by Cisco',
-    date: '2025',
-    badgeUrl: 'https://images.credly.com/size/680x680/images/b1c17d0c-e76b-45fc-9b28-87b01ae1caf3/blob',
-    credlyUrl: 'https://www.credly.com/badges/60842b21-4c21-4910-acef-3cf4da87c29a',
-    category: 'Development',
+    id: "HTML Essentials",
+    name:
+      "HTML Essentials",
+    issuer:
+      "Issued by Cisco",
+    date: "2025",
+    badgeUrl:
+      "https://images.credly.com/size/680x680/images/b1c17d0c-e76b-45fc-9b28-87b01ae1caf3/blob",
+    credlyUrl:
+      "https://www.credly.com/badges/60842b21-4c21-4910-acef-3cf4da87c29a",
+    category: "Development",
   },
+
   {
-    id: 'react-nodejs',
-    name: 'React.js & Node.js',
-    issuer: 'Global Skills Development Agency',
-    date: '2023',
-    badgeUrl: 'https://globalskills.com.bd/assets/images/logo-f-width.png',
-    credlyUrl: 'https://www.credly.com/users/mohim-reza',
-    category: 'Development',
+    id: "react-nodejs",
+    name:
+      "React.js & Node.js",
+    issuer:
+      "Global Skills Development Agency",
+    date: "2023",
+    badgeUrl:
+      "https://globalskills.com.bd/assets/images/logo-f-width.png",
+    credlyUrl:
+      "https://www.credly.com/users/mohim-reza",
+    category: "Development",
   },
+
   {
-    id: 'growth-hacking',
-    name: 'Growth Hacking & Online Campaigns Internship',
-    issuer: 'RIT & Excelerate',
-    date: '2025',
-    badgeUrl: 'https://excelerateuserprofile.s3.ap-south-1.amazonaws.com/WebsiteImageFiles/Badge/Badge_0000000010KRZVQY9TWPXFJPKG_image_link.png',
-    credlyUrl: '',
-    category: 'Marketing',
+    id: "growth-hacking",
+    name:
+      "Growth Hacking & Online Campaigns Internship",
+    issuer:
+      "RIT & Excelerate",
+    date: "2025",
+    badgeUrl:
+      "https://excelerateuserprofile.s3.ap-south-1.amazonaws.com/WebsiteImageFiles/Badge/Badge_0000000010KRZVQY9TWPXFJPKG_image_link.png",
+    credlyUrl: "",
+    category: "Marketing",
   },
+
   {
-    id: 'coursera-1694qdw7f2po',
-    name: 'Introduction to Front-End Development',
-    issuer: 'Coursera',
-    date: 'TODO: issue year, e.g. 2025',
-    badgeUrl: '', // Coursera doesn't provide a Credly badge image
-    credlyUrl: 'https://www.coursera.org/account/accomplishments/records/1694QDW7F2PO',
-    category: 'Development',
+    id:
+      "coursera-1694qdw7f2po",
+    name:
+      "Introduction to Front-End Development",
+    issuer:
+      "Coursera",
+    date:
+      "TODO: issue year, e.g. 2025",
+    badgeUrl: "",
+    credlyUrl:
+      "https://www.coursera.org/account/accomplishments/records/1694QDW7F2PO",
+    category: "Development",
   },
 ];
+
+// --------------------------------------------------
+// EXPERIENCE
+// --------------------------------------------------
 
 export const EXPERIENCE: Experience[] = [
   {
-    id: 'shop-online-ny-react',
-    company: 'Shop Online New York',
-    position: 'React Developer',
-    duration: 'Sep 2025 – Present',
+    id:
+      "shop-online-ny-react",
+    company:
+      "Shop Online New York",
+    position:
+      "React Developer",
+    duration:
+      "Sep 2025 – Present",
     description: [
-      'Built scalable, responsive web applications using React.js, TypeScript, Tailwind CSS, and Redux Toolkit.',
-      'Implemented secure JWT authentication with session persistence and token refresh.',
-      'Developed Node.js/Express proxy services for secure third-party API integration.',
-      'Created reusable UI components, multi-step forms, and OTP verification flows.',
-      'Managed global application state with Redux Toolkit for consistent data handling.',
-      'Refactored legacy code into modular, maintainable, and scalable architecture.',
-      'Collaborated with cross-functional teams to deliver accessible, high-quality interfaces.',
-      'Optimized frontend performance, code quality, and cross-device compatibility.',
-      'Wrote clean, maintainable code following modern React and TypeScript best practices.',
-      'Improved reliability through unit testing, code reviews, and continuous optimization.',
+      "Built scalable, responsive web applications using React.js, TypeScript, Tailwind CSS, and Redux Toolkit.",
+      "Implemented secure JWT authentication with session persistence and token refresh.",
+      "Developed Node.js/Express proxy services for secure third-party API integration.",
+      "Created reusable UI components, multi-step forms, and OTP verification flows.",
+      "Managed global application state with Redux Toolkit for consistent data handling.",
+      "Refactored legacy code into modular, maintainable, and scalable architecture.",
+      "Collaborated with cross-functional teams to deliver accessible, high-quality interfaces.",
+      "Optimized frontend performance, code quality, and cross-device compatibility.",
+      "Wrote clean, maintainable code following modern React and TypeScript best practices.",
+      "Improved reliability through unit testing, code reviews, and continuous optimization.",
     ],
-    technologies: ['React.js', 'TypeScript', 'TailwindCSS', 'Redux Toolkit', 'Node.js', 'Express.js', 'JWT', 'Jest'],
+    technologies: [
+      "React.js",
+      "TypeScript",
+      "TailwindCSS",
+      "Redux Toolkit",
+      "Node.js",
+      "Express.js",
+      "JWT",
+      "Jest",
+    ],
   },
+
   {
-    id: 'shop-online-ny-intern',
-    company: 'Shop Online New York',
-    position: 'Frontend Developer Intern',
-    duration: 'Sep 2025 – Dec 2025',
+    id:
+      "shop-online-ny-intern",
+    company:
+      "Shop Online New York",
+    position:
+      "Frontend Developer Intern",
+    duration:
+      "Sep 2025 – Dec 2025",
     description: [
-      'Developed responsive e-commerce interfaces using React.js and Tailwind CSS.',
-      'Integrated REST APIs and improved code reliability with TypeScript.',
-      'Enhanced application performance and user experience with the development team.',
+      "Developed responsive e-commerce interfaces using React.js and Tailwind CSS.",
+      "Integrated REST APIs and improved code reliability with TypeScript.",
+      "Enhanced application performance and user experience with the development team.",
     ],
-    technologies: ['React.js', 'TypeScript', 'TailwindCSS'],
+    technologies: [
+      "React.js",
+      "TypeScript",
+      "TailwindCSS",
+    ],
   },
+
   {
-    id: 'luxe-perfum',
-    company: 'Luxe Perfum · Self-employed',
-    position: 'Founder & Owner',
-    duration: 'Aug 2025 – Present',
+    id:
+      "luxe-perfum",
+    company:
+      "Luxe Perfum · Self-employed",
+    position:
+      "Founder & Owner",
+    duration:
+      "Aug 2025 – Present",
     description: [
-      'Founded and manage an independent fragrance brand.',
-      'Develop custom perfume formulations with optimized scent performance.',
-      'Oversee sourcing, inventory, pricing, fulfillment, and customer support.',
-      'Analyze customer preferences to provide personalized recommendations.',
-      'Execute digital marketing campaigns to increase brand awareness and sales.',
-      'Strengthen customer retention through feedback-driven product improvements.',
-      'Research market trends to identify new product opportunities.',
-      'Manage branding, packaging, and overall product presentation.',
+      "Founded and manage an independent fragrance brand.",
+      "Develop custom perfume formulations with optimized scent performance.",
+      "Oversee sourcing, inventory, pricing, fulfillment, and customer support.",
+      "Analyze customer preferences to provide personalized recommendations.",
+      "Execute digital marketing campaigns to increase brand awareness and sales.",
+      "Strengthen customer retention through feedback-driven product improvements.",
+      "Research market trends to identify new product opportunities.",
+      "Manage branding, packaging, and overall product presentation.",
     ],
-    technologies: ['Entrepreneurship', 'Business Development', 'Marketing', 'Product Development', 'Inventory Management'],
+    technologies: [
+      "Entrepreneurship",
+      "Business Development",
+      "Marketing",
+      "Product Development",
+      "Inventory Management",
+    ],
   },
+
   {
-    id: 'excelerate-growth-hacking',
-    company: 'Excelerate',
-    position: 'Growth Hacking Intern',
-    duration: 'Aug 2025 – Sep 2025',
+    id:
+      "excelerate-growth-hacking",
+    company:
+      "Excelerate",
+    position:
+      "Growth Hacking Intern",
+    duration:
+      "Aug 2025 – Sep 2025",
     description: [
-      'Executed growth hacking strategies to improve user acquisition and engagement.',
-      'Supported digital marketing initiatives through data-driven experimentation.',
+      "Executed growth hacking strategies to improve user acquisition and engagement.",
+      "Supported digital marketing initiatives through data-driven experimentation.",
     ],
-    technologies: ['Growth Hacking', 'Business Growth Strategies'],
+    technologies: [
+      "Growth Hacking",
+      "Business Growth Strategies",
+    ],
   },
+
   {
-    id: 'betafore',
-    company: 'BetaFore - Software & Digital Media',
-    position: 'React Developer Intern',
-    duration: 'May 2024 – Aug 2024',
+    id:
+      "betafore",
+    company:
+      "BetaFore - Software & Digital Media",
+    position:
+      "React Developer Intern",
+    duration:
+      "May 2024 – Aug 2024",
     description: [
-      'Developed a responsive e-commerce application using React and Vite.',
-      'Integrated Google Maps and Leaflet for location-based features.',
-      'Built modern UIs with Material-UI and Bootstrap.',
-      'Consumed REST APIs with Axios and optimized local storage using IndexedDB.',
-      'Implemented SPA routing with React Router DOM.',
+      "Developed a responsive e-commerce application using React and Vite.",
+      "Integrated Google Maps and Leaflet for location-based features.",
+      "Built modern UIs with Material-UI and Bootstrap.",
+      "Consumed REST APIs with Axios and optimized local storage using IndexedDB.",
+      "Implemented SPA routing with React Router DOM.",
     ],
-    technologies: ['React', 'JavaScript', 'CSS', 'Material-UI', 'Bootstrap', 'Leaflet', 'Google Maps API', 'Axios', 'IndexedDB', 'Vite'],
+    technologies: [
+      "React",
+      "JavaScript",
+      "CSS",
+      "Material-UI",
+      "Bootstrap",
+      "Leaflet",
+      "Google Maps API",
+      "Axios",
+      "IndexedDB",
+      "Vite",
+    ],
   },
+
   {
-    id: 'techtrioz',
-    company: 'TechTrioZ Solutions',
-    position: 'Data Entry Specialist',
-    duration: 'Jan 2023 – Feb 2024',
+    id:
+      "techtrioz",
+    company:
+      "TechTrioZ Solutions",
+    position:
+      "Data Entry Specialist",
+    duration:
+      "Jan 2023 – Feb 2024",
     description: [
-      'Managed geospatial and business data with high accuracy.',
-      'Maintained a 99.8% accuracy rate across large-scale data processing tasks.',
+      "Managed geospatial and business data with high accuracy.",
+      "Maintained a 99.8% accuracy rate across large-scale data processing tasks.",
     ],
-    technologies: ['Data Processing', 'GIS', 'Database Management'],
+    technologies: [
+      "Data Processing",
+      "GIS",
+      "Database Management",
+    ],
   },
 ];
 
+// --------------------------------------------------
+// CONTACT
+// --------------------------------------------------
+
 export const CONTACT = {
-  email: 'mohimreza1234@gmail.com',
-  github: 'https://github.com/Md-Mohimul-Alam',
-  linkedin: 'https://www.linkedin.com/in/md-mohimul-alam-a5736821a/',
-  phone: '01782152268',
-  credly: 'https://www.credly.com/users/mohim-reza',
+  email:
+    "mohimreza1234@gmail.com",
+
+  github:
+    "https://github.com/Md-Mohimul-Alam",
+
+  linkedin:
+    "https://www.linkedin.com/in/md-mohimul-alam-a5736821a/",
+
+  phone:
+    "01782152268",
+
+  credly:
+    "https://www.credly.com/users/mohim-reza",
 };
 
+// --------------------------------------------------
+// SOCIAL LINKS
+// --------------------------------------------------
+
 export const SOCIAL_LINKS = [
-  { name: 'GitHub', url: CONTACT.github, icon: 'Github' },
-  { name: 'LinkedIn', url: CONTACT.linkedin, icon: 'Linkedin' },
-  { name: 'Email', url: `mailto:${CONTACT.email}`, icon: 'Mail' },
-  { name: 'Phone', url: `tel:${CONTACT.phone}`, icon: 'Phone' },
+  {
+    name: "GitHub",
+    url:
+      CONTACT.github,
+    icon:
+      "Github",
+  },
+
+  {
+    name:
+      "LinkedIn",
+    url:
+      CONTACT.linkedin,
+    icon:
+      "Linkedin",
+  },
+
+  {
+    name:
+      "Email",
+    url:
+      `mailto:${CONTACT.email}`,
+    icon:
+      "Mail",
+  },
+
+  {
+    name:
+      "Phone",
+    url:
+      `tel:${CONTACT.phone}`,
+    icon:
+      "Phone",
+  },
 ];
