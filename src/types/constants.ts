@@ -108,7 +108,8 @@ export const PROJECTS: Project[] = [
     liveDemo: 'https://santarancms-nine.vercel.app/',
     featured: true,
     category: ['fullstack'],
-  }
+  },
+
 ];
 
 // SKILLS, CERTIFICATIONS, EXPERIENCE, CONTACT, SOCIAL_LINKS remain unchanged
@@ -202,8 +203,8 @@ export const CERTIFICATIONS: Certification[] = [
   },
   {
     id: 'coursera-1694qdw7f2po',
-    name: 'TODO: course name from the form',
-    issuer: 'TODO: issuing organization (e.g. Coursera / DeepLearning.AI / Google)',
+    name: 'Introduction to Front-End Development',
+    issuer: 'Coursera',
     date: 'TODO: issue year, e.g. 2025',
     badgeUrl: '', // Coursera doesn't provide a Credly badge image
     credlyUrl: 'https://www.coursera.org/account/accomplishments/records/1694QDW7F2PO',
